@@ -315,14 +315,21 @@
     .kapak { grid-template-columns: 1fr; min-height: 0; }
     .kapak-foto { order: -1; aspect-ratio: 3 / 4; max-height: 78svh; }
     .kapak-yazi { border-right: 0; }
-    .album { display: block; columns: 2; column-gap: 12px; }
+    .album { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
     .sutun { display: contents; }
-    .album .kare, .album .not { margin-bottom: 12px; }
-    .not { font-size: 16px; padding: 12px 0 14px; }
-    .not br { display: none; }
+    .album > .sutun > * { order: var(--o); }
+    .album .kare[data-genis] { grid-column: 1 / -1; }
+    .album .not {
+      grid-column: 1 / -1; margin: 14px 0; padding: 18px 0 20px;
+      font-size: 19px; line-height: 1.38;
+    }
+    .not .ikinci { margin-top: 10px; }
+    .asagi { display: none; }
     .tek { grid-template-columns: 1fr; gap: 24px; }
     .tek .kare { order: -1; width: 78%; justify-self: end; }
     .tek-not p { font-size: 5vw; padding-bottom: 16px; }
+    .tek-not { justify-self: stretch; }
+    .kaydir .serit-not { font-size: 19px; }
     .kaydir .kare, .kaydir .serit-not { height: min(440px, 58svh); }
     .kaydir .serit-not { width: 230px; padding: 22px; font-size: 20px; }
     .kapak-alt { margin-top: 32px; }
@@ -401,22 +408,22 @@
   </div>
   <div class="album">
     <div class="sutun">
-      <figure class="kare belir" data-foto="02"><img src="foto/02.jpg" alt="" loading="lazy" width="900" height="1600"></figure>
-      <blockquote class="not belir"><p>Seni düşünmek güzel şey, ümitli şey, <br>dünyanın en güzel sesinden <br>en güzel şarkıyı dinlemek gibi bir şey…</p></blockquote>
-      <figure class="kare belir" data-foto="10"><img src="foto/10.jpg" alt="" loading="lazy" width="900" height="1600"></figure>
-      <figure class="kare belir" data-foto="01"><img src="foto/01.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
+      <figure class="kare belir" data-foto="02" style="--o:1"><img src="foto/02.jpg" alt="" loading="lazy" width="900" height="1600"></figure>
+      <blockquote class="not belir" style="--o:3"><p>Seni düşünmek güzel şey, ümitli şey, <br>dünyanın en güzel sesinden <br>en güzel şarkıyı dinlemek gibi bir şey…</p></blockquote>
+      <figure class="kare belir" data-foto="10" style="--o:2"><img src="foto/10.jpg" alt="" loading="lazy" width="900" height="1600"></figure>
+      <figure class="kare belir" data-foto="01" style="--o:4"><img src="foto/01.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
     </div>
     <div class="sutun">
-      <blockquote class="not belir"><p>Seni seviyorum; nasıl, ne zaman, nereden bilmeden. <br>Seni dolambaçsız seviyorum, gurursuz: <br>böyle seviyorum, çünkü başka türlü sevmeyi bilmiyorum.</p></blockquote>
-      <figure class="kare belir" data-foto="04"><img src="foto/04.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
-      <figure class="kare belir" data-foto="08"><img src="foto/08.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
-      <figure class="kare belir" data-foto="13"><img src="foto/13.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
+      <blockquote class="not belir" style="--o:7"><p>Seni seviyorum; nasıl, ne zaman, nereden bilmeden. <br>Seni dolambaçsız seviyorum, gurursuz: <br>böyle seviyorum, çünkü başka türlü sevmeyi bilmiyorum.</p></blockquote>
+      <figure class="kare belir" data-foto="04" style="--o:5"><img src="foto/04.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
+      <figure class="kare belir" data-foto="08" style="--o:8"><img src="foto/08.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
+      <figure class="kare belir" data-foto="13" style="--o:9"><img src="foto/13.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
     </div>
     <div class="sutun">
-      <figure class="kare belir" data-foto="11"><img src="foto/11.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
-      <figure class="kare belir" data-foto="12"><img src="foto/12.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
-      <figure class="kare belir" data-foto="17"><img src="foto/17.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
-      <blockquote class="not belir"><p>Gelsene dedi bana <br>Kalsana dedi bana <br>Gülsene dedi bana <br>Ölsene dedi bana</p><p class="ikinci">Geldim <br>Kaldım <br>Güldüm <br>Öldüm</p></blockquote>
+      <figure class="kare belir" data-foto="11" style="--o:10"><img src="foto/11.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
+      <figure class="kare belir" data-foto="12" style="--o:11"><img src="foto/12.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
+      <figure class="kare belir" data-foto="17" style="--o:6" data-genis><img src="foto/17.jpg" alt="" loading="lazy" width="1200" height="1600"></figure>
+      <blockquote class="not belir" style="--o:12"><p>Gelsene dedi bana <br>Kalsana dedi bana <br>Gülsene dedi bana <br>Ölsene dedi bana</p><p class="ikinci">Geldim <br>Kaldım <br>Güldüm <br>Öldüm</p></blockquote>
     </div>
   </div>
 </section>
