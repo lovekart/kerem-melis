@@ -8,7 +8,7 @@
 <title>Kerem &amp; Melis</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
   :root {
     --zemin: #F2ECE3;
@@ -80,19 +80,9 @@
   }
   .isim span { display: block; }
   .isim .ve {
-    width: 1.3em; height: .84em;
-    margin: .02em 0 .04em .06em;
-    transform-origin: 30% 60%;
+    font-size: .36em; line-height: 1; color: var(--sarap);
+    margin: .12em 0 .1em .18em;
   }
-  .monogram { display: block; width: 100%; height: 100%; overflow: visible; }
-  .mono-m { font: 400 172px var(--baslik); fill: var(--murekkep); }
-  .mono-k {
-    font: italic 600 204px "Cormorant Garamond", Georgia, serif; fill: var(--sarap);
-    stroke: var(--zemin); stroke-width: 10px; paint-order: stroke; stroke-linejoin: round;
-  }
-  .mono-cizgi { stroke: var(--sarap); stroke-width: 2; }
-  .isim .ve { opacity: 0; scale: .6; transition: opacity .7s ease .9s, scale .9s cubic-bezier(.2, 1.4, .4, 1) .9s; }
-  .acildi .isim .ve { opacity: 1; scale: 1; }
   .isim .iki { padding-left: .42em; }
   .kapak-alt {
     display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 20px 32px;
@@ -358,7 +348,6 @@
   @media (prefers-reduced-motion: reduce) {
     .belir { opacity: 1; transform: none; transition: none; }
     .perde { display: none; }
-    .isim .ve { opacity: 1; scale: 1; }
   }
 </style>
 </head>
@@ -378,13 +367,7 @@
   <div class="kapak-yazi">
     <h1 class="isim">
       <span class="bir">Kerem</span>
-      <span class="ve" role="img" aria-label="K ve M">
-        <svg class="monogram" viewBox="30 36 240 156" aria-hidden="true">
-          <text class="mono-m" x="76" y="170">M</text>
-          <text class="mono-k" x="34" y="160">K</text>
-          <path class="mono-cizgi" d="M40 186 H262"/>
-        </svg>
-      </span>
+      <span class="ve">&amp;</span>
       <span class="iki">Melis</span>
     </h1>
     <blockquote class="kapak-not"><p>Ben sana mecburum bilemezsin<br>Adını mıh gibi aklımda tutuyorum<br>Büyüdükçe büyüyor gözlerin<br>Ben sana mecburum bilemezsin<br>İçimi seninle ısıtıyorum.</p></blockquote>
